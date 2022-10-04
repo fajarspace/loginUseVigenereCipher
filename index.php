@@ -16,19 +16,16 @@
     <title>Sistem login menggunakan vigenere cipher</title>
   </head>
 <body>
-<div class="container kotak-login">
+<div class="kotak-login">
     <!-- REGISTER -->
     <form action="register.php" class="" method="post">
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Username</label>
             <input class="form-control" required="required" name="username" id="username" rows="3" placeholder="masukkan username"></input>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Password</label>
             <input class="form-control" required="required" name="password" id="password" rows="3" placeholder="masukkan password"></input>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Key</label>
             <input type="text" class="form-control" required="required" name="keytext" id="keytext" aria-describedby="emailHelp" placeholder="masukkan key text">
         </div>
         <div class="form-group">
@@ -39,12 +36,10 @@
     <!-- LOGIN -->
     <form action="login.php" class="" method="post">
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Username</label>
-            <input class="form-control" required="required" name="username" id="" rows="3" placeholder="masukkan plain text"></input>
+            <input class="form-control" required="required" name="username" id="" rows="3" placeholder="username"></input>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Password</label>
-            <input class="form-control" required="required" name="password" id="" rows="3" placeholder="masukkan plain text"></input>
+            <input class="form-control" required="required" name="password" id="" rows="3" placeholder="password"></input>
         </div>
         <div class="form-group">
             <input type="submit" name="submit" value="login" class="btn btn-info">

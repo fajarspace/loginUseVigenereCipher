@@ -1,20 +1,20 @@
 <?php
    session_start();
    require_once("config.php");
-   $result = $_POST["username"];
-   $hasil = $_POST["password"];
-   $sql = "SELECT * FROM user WHERE username = '$result' ";
+   $user = $_POST["username"];
+   $pass = $_POST["password"];
+   $sql = "SELECT * FROM user WHERE username = '$user' ";
    $query = $db->query($sql);
-   $final = $query->fetch_assoc();
+   $hasil = $query->fetch_assoc();
    if($query->num_rows == 0) {
      echo '<div class="alert alert-danger">*Username belum terdaftar <a href="index" >Kembali</a> </div>'; 
    } else {
-     if($hasil <> $final['password']) {
+     if($pass <> $hasil['password']) {
        echo '<div class="alert alert-danger">*Password Salah <a href="index" >Kembali</a></div>'; 
      } else {
-       $_SESSION['username'] = $final['username'];
+       $_SESSION['username'] = $hasil['username'];
        header('location:halo/');
-       $_SESSION['username'] = $final['username'];
+       $_SESSION['username'] = $hasil['username'];
        header('location:halo/');
      }
    }

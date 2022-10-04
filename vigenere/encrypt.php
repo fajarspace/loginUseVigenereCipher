@@ -5,17 +5,17 @@
         // $str = "rasamautau";
         // $key = "blog";
     
-        $user = $_POST["username"];
-        $pass = $_POST["password"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
         $key = $_POST["keytext"];
         
         // printf("Text: %s\n", $str);
         // printf("key:  %s\n", $key);
         
-        $cod = encipher($user, $key, true); 
-        $result = $cod;
-        $pww = encipher($pass, $key, true); 
-        $hasil = $pww;
+        $cod = encipher($username, $key, true); 
+        $user = $cod;
+        $pww = encipher($password, $key, true); 
+        $pass = $pww;
         // printf("Code: %s\n", $cod);
     
         // $dec = encipher($cod, $key, false); printf("Back: %s\n", $dec);
