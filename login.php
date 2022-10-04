@@ -14,7 +14,7 @@
      } else {
        $_SESSION['username'] = $hasil['username'];
        header('location:halo/');
-       $_SESSION['username'] = $hasil['username'];
+       $_SESSION['password'] = $hasil['password'];
        header('location:halo/');
      }
    }

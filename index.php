@@ -19,6 +19,7 @@
 <div class="kotak-login">
     <!-- REGISTER -->
     <form action="register.php" class="" method="post">
+    <h2>Daftar</h2>
         <div class="form-group">
             <input class="form-control" required="required" name="username" id="username" rows="3" placeholder="masukkan username"></input>
         </div>
@@ -26,7 +27,7 @@
             <input class="form-control" required="required" name="password" id="password" rows="3" placeholder="masukkan password"></input>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" required="required" name="keytext" id="keytext" aria-describedby="emailHelp" placeholder="masukkan key text">
+            <input type="text" class="form-control" required="required" name="keytext" id="keytext" aria-describedby="emailHelp" placeholder="masukkan key">
         </div>
         <div class="form-group">
             <input type="submit" name="submit" value="Register" class="btn btn-info">
@@ -35,6 +36,7 @@
 
     <!-- LOGIN -->
     <form action="login.php" class="" method="post">
+    <h2>Masuk</h2>
         <div class="form-group">
             <input class="form-control" required="required" name="username" id="" rows="3" placeholder="username"></input>
         </div>
