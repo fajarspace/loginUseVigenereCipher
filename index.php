@@ -51,19 +51,7 @@
         </div>
     </form>
     </div>
-    <div class="card text-center">
-    <div class="card-header"> Hasil Encrypt </div>
-    <div class="card-body">
-            
-            <!-- <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        </div>
-    <div class="card-footer text-muted"> coded with <span style="color: Tomato;">
-        <i class="fa fa-heart"></i>
-        </span> by Rivaldi Rizalul Akhsan </div>
-    </div>
-    <br>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
