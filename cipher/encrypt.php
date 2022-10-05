@@ -12,10 +12,8 @@ if(isset($_POST["submit"])) {
     // printf("Text: %s\n", $str);
     // printf("key:  %s\n", $key);
 
-    $cod = encipher($username, $key, true); 
-    $user = $cod;
-    $pww = encipher($password, $key, true); 
-    $pass = $pww;
+    $user = encipher($username, $key, true); 
+    $pass = encipher($password, $key, true); 
     // printf("Code: %s\n", $cod);
 
     // $dec = encipher($cod, $key, false); printf("Back: %s\n", $dec);
