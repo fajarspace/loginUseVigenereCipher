@@ -1,11 +1,17 @@
 .kotak-login{
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 70%;
     margin: 5% auto;
 }
 @media only screen and (max-width: 968px) {
-    .kotak-login {
-      width: 90%;
-    }
+  .kotak-login {
+    width: 90%;
   }
+}
+@media only screen and (max-width: 768px) {
+  .kotak-login {
+    display: block;
+    width: 70%;
+  }
+}
