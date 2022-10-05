@@ -23,23 +23,22 @@ if(!isset($_SESSION['username'])) {
     <title>berhasil masuk!</title>
   </head>
 <body>
-<div class='halo' >
-   <div class="card">
-      <div class="card-header">
-            Berhasil Login!
-      </div>
-      <div class="card-body kotak">
-         <div>
-            <p>Username <b><?php echo $user ?></b></p>
-            <p>Password <b><?php echo $pass ?></b></p>
-            <a class="text-danger" href="../logout.php">Logout</a>
+   <div class='halo' >
+      <div class="card">
+         <div class="card-header">
+               Berhasil Login!
          </div>
-         <div>
-            <h1 style='font-size:5em;'>😱</h1>
+         <div class="card-body kotak">
+            <div>
+               <p>Username <b><?php echo $user ?></b></p>
+               <p>Password <b><?php echo $pass ?></b></p>
+               <a class="text-danger" href="../logout">Logout</a>
+            </div>
+            <div>
+               <h1 style='font-size:5em;'>😱</h1>
+            </div>
          </div>
       </div>
    </div>
-</div>
-   
 </body>
 </html>
