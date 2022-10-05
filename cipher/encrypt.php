@@ -1,27 +1,27 @@
 <?php
 if(isset($_POST["submit"])) {
-// process form data, send email, output message
+    // process form data, send email, output message
 
-// $str = "rasamautau";
-// $key = "blog";
+    // $str = "rasamautau";
+    // $key = "blog";
 
-$username = $_POST["username"];
-$password = $_POST["password"];
-$key = $_POST["keytext"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $key = $_POST["keytext"];
 
-// printf("Text: %s\n", $str);
-// printf("key:  %s\n", $key);
+    // printf("Text: %s\n", $str);
+    // printf("key:  %s\n", $key);
 
-$cod = encipher($username, $key, true); 
-$user = $cod;
-$pww = encipher($password, $key, true); 
-$pass = $pww;
-// printf("Code: %s\n", $cod);
+    $cod = encipher($username, $key, true); 
+    $user = $cod;
+    $pww = encipher($password, $key, true); 
+    $pass = $pww;
+    // printf("Code: %s\n", $cod);
 
-// $dec = encipher($cod, $key, false); printf("Back: %s\n", $dec);
+    // $dec = encipher($cod, $key, false); printf("Back: %s\n", $dec);
 
-// printf("ord:  %s\n", ord('B'));
-// printf("ord:  %s\n", ord('A'));
+    // printf("ord:  %s\n", ord('B'));
+    // printf("ord:  %s\n", ord('A'));
 
 }
 

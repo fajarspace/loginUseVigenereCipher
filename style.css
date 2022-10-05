@@ -4,6 +4,10 @@
     width: 70%;
     margin: 5% auto;
 }
+.halo{
+  width: 40%;
+  margin: 5% auto;
+}
 @media only screen and (max-width: 968px) {
   .kotak-login {
     width: 90%;
@@ -13,5 +17,8 @@
   .kotak-login {
     display: block;
     width: 70%;
+  }
+  .halo{
+    width: 90%;
   }
 }
