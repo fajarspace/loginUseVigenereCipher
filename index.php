@@ -27,9 +27,6 @@
             <input class="form-control" required="required" name="password" id="password" rows="3" placeholder="masukkan password"></input>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" required="required" name="keytext" id="keytext" aria-describedby="emailHelp" placeholder="masukkan key">
-        </div>
-        <div class="form-group">
             <input type="submit" name="submit" value="Register" class="btn btn-info">
         </div>
     </form>

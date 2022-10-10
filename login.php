@@ -1,9 +1,7 @@
 <?php
 session_start();
 require_once "config.php";
-$user = $_POST["username"];
-$pass = $_POST["password"];
-$key = $_POST["keytext"];
+require "cipher/encrypt.php";
 $sql = "SELECT * FROM user WHERE username = '$user' ";
 $query = $db->query($sql);
 $hasil = $query->fetch_assoc();

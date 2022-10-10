@@ -6,9 +6,16 @@
 }
 .halo{
   width: 40%;
+  font-size: 2em;
   margin: 5% auto;
 }
 .kotak{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kotak-regist{
   display: flex;
   justify-content: space-between;
   align-items: center;

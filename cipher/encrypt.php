@@ -1,25 +1,12 @@
 <?php
 if(isset($_POST["submit"])) {
-    // process form data, send email, output message
-
-    // $str = "rasamautau";
-    // $key = "blog";
 
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $key = $_POST["keytext"];
-
-    // printf("Text: %s\n", $str);
-    // printf("key:  %s\n", $key);
+    $key = "batu";
 
     $user = encipher($username, $key, true); 
     $pass = encipher($password, $key, true); 
-    // printf("Code: %s\n", $cod);
-
-    // $dec = encipher($cod, $key, false); printf("Back: %s\n", $dec);
-
-    // printf("ord:  %s\n", ord('B'));
-    // printf("ord:  %s\n", ord('A'));
 
 }
 
