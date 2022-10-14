@@ -2,15 +2,13 @@
 require "../config.php";
 session_start();
 if(!isset($_SESSION['username'])) {
-   header('location:../index'); 
-} else { 
-   $user = $_SESSION['username']; 
-   $pass = $_SESSION['password']; 
+   header('location:../index');
+} else {
+   $user = $_SESSION['username'];
+   $pass = $_SESSION['password'];
 }
-
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->

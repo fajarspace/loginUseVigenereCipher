@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+  require "config.php";
+  require "cipher/encrypt.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,41 +13,37 @@
     <title>Proses regist</title>
 </head>
 <body>
-<div class='halo' >
-    <?php
-    require "config.php";
-    require "cipher/encrypt.php";
-    $sql = "SELECT * FROM user WHERE username = '$user' ";
-    $query = $db->query($sql);
-    if ($query->num_rows != 0) {
-        echo "<div style='font-family:arial;'>";
-        echo "<div>Username Sudah Terdaftar! 🤨 <a href='index'>Kembali</a></div>";
-    } else {
-        if (!$user || !$pass ) {
-            echo "<div>Masih ada data yang kosong! <a href='index'>Back</a>";
+  <div class='halo' >
+      <?php
+        $user = vigenere($username, $key, true);
+        $pass = vigenere($password, $key, true);
+        $sql = "SELECT * FROM user WHERE username = '$user' ";
+        $query = $db->query($sql);
+        if ($query->num_rows != 0) {
+            echo "<div class='alert alert-warning'>Username Sudah Terdaftar! 🤨 <a href='index'>Kembali</a></div>";
         } else {
-            $data = "INSERT INTO user VALUES (NULL, '$user', '$pass')";
-            $simpan = $db->query($data);
-            if ($simpan) {
-                echo "<div>Pendaftaran Sukses 🥳, Silahkan <a href='index'>Login</a></div>";
+            if (!$user || !$pass) {
+                echo "<div>Masih ada data yang kosong! <a href='index'>Back</a>";
             } else {
-                echo "<div>Proses Gagal!</div>";
+                $data = "INSERT INTO user VALUES (NULL, '$user', '$pass')";
+                $simpan = $db->query($data);
+                if ($simpan) {
+                    echo "<div class='alert alert-success'>Pendaftaran Sukses 🥳, Silahkan <a href='index'>Login</a></div>
+                    <div class='card'>
+                    <div class='card-header'>Key <b> $key </b></div>
+                        <div class='card-body kotak-regist'>
+                            <div>
+                                <p>Username <b>$user</b> ($username)</p>
+                                <p>Password <b>$pass</b> ($password)</p>
+                            </div>
+                        </div>
+                    </div>";
+                } else {
+                    echo "<div class='alert alert-danger'>Proses Gagal!</div>";
+                }
             }
         }
-    }
-    ?>
-    <br>
-    <div class="card">
-    <div class="card-header">Key <b><?php echo $key ?></b></div>
-        <div class="card-body kotak-regist">
-            <div>
-                <p>Username <b><?php echo $user ?></b> (<?php echo $username ?>)</p>
-                <p>Password <b><?php echo $pass ?>
-                </b> (<?php echo $password ?>)</p>
-            </div>
-        </div>
-    </div>
-</div>
+      ?>
+  </div>
 </body>
 </html>
-
