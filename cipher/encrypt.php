@@ -4,8 +4,7 @@
   $password = ($_POST["password"]);
   $key = "halo";
 
-  function vigenere($src, $key, $is_encode)
-  {
+  function vigenere($src, $key, $is_encode){
       $key = strtoupper($key);
       $src = strtoupper($src);
       $dest = '';
@@ -34,6 +33,6 @@
           , $i, 1);
       }
       return $dest;
-  }
+    }
 
 ?>

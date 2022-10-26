@@ -30,9 +30,9 @@
                 if ($simpan) {
                     echo "<div class='alert alert-success'>Pendaftaran Sukses 🥳, Silahkan <a href='index'>Login</a></div>
                     <div class='card'>
-                    <div class='card-header'>Key <b> $key </b></div>
                         <div class='card-body kotak-regist'>
                             <div>
+                                <p>Key <b>$key</b></p>
                                 <p>Username <b>$user</b> ($username)</p>
                                 <p>Password <b>$pass</b> ($password)</p>
                             </div>
